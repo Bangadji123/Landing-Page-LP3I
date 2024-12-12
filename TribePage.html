@@ -21,7 +21,7 @@
                     <a href="#programs">Program & Jurusan</a>
                     <a href="#contact">Hubungi Kami</a>
                 </div>
-            </nav>
+            </nav> 
         </div>
     </section>
 
@@ -62,35 +62,63 @@
         </p>
         <div class="program-cards">
             <!-- Program Card 1 -->
-            <div class="program-card">
+            <div class="program-card" onclick="toggleContent('business-content')">
                 <img src="Image/business.png" alt="Business Icon" class="program-icon">
                 <h3 class="program-title">Business</h3>
                 <div class="program-arrow">
-                    <a href=""><i class='bx bx-chevron-down'></i></a>
+                    <i class='bx bx-chevron-down bx-lg'></i>
+                </div>
+            </div>
+            <div id="business-content" class="program-content">
+                <div class="program-detail">
+                    <div class="program-description">
+                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Est gravida dictum phasellus fermentum dictum elit. Ut libero cursus ultrices malesuada dis metus sit. Egestas aenean apent ipsum adipiscing posuere accumsan placerat efficitur. Phasellus scelerisque purus commodo conubia suspendisse. Semper rhoncus aliquam non vel.</p>
+                    </div>
                 </div>
             </div>
             <!-- Program Card 2 -->
-            <div class="program-card">
-                <img src="Image/technology.png" alt="Business Icon" class="program-icon">
+            <div class="program-card" onclick="toggleContent('technology-content')">
+                <img src="Image/technology.png" alt="Technology Icon" class="program-icon">
                 <h3 class="program-title">Technology</h3>
                 <div class="program-arrow">
-                    <a href=""><i class='bx bx-chevron-down'></i></a>
+                    <i class='bx bx-chevron-down bx-lg'></i>
+                </div>
+            </div>
+            <div id="technology-content" class="program-content">
+                <div class="program-detail">
+                    <div class="program-description">
+                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Est gravida dictum phasellus fermentum dictum elit. Ut libero cursus ultrices malesuada dis metus sit. Egestas aenean apent ipsum adipiscing posuere accumsan placerat efficitur.</p>
+                    </div>
                 </div>
             </div>
             <!-- Program Card 3 -->
-            <div class="program-card">
-                <img src="Image/communication.png" alt="Business Icon" class="program-icon">
+            <div class="program-card" onclick="toggleContent('communication-content')">
+                <img src="Image/communication.png" alt="Communication Icon" class="program-icon">
                 <h3 class="program-title">Communication</h3>
                 <div class="program-arrow">
-                    <a href=""><i class='bx bx-chevron-down'></i></a>
+                    <i class='bx bx-chevron-down bx-lg'></i>
+                </div>
+            </div>
+            <div id="communication-content" class="program-content">
+                <div class="program-detail">
+                    <div class="program-description">
+                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Est gravida dictum phasellus fermentum dictum elit. Ut libero cursus ultrices malesuada dis metus sit. Egestas aenean apent ipsum adipiscing posuere accumsan placerat efficitur.</p>
+                    </div>
                 </div>
             </div>
             <!-- Program Card 4 -->
-            <div class="program-card">
-                <img src="Image/finance.png" alt="Business Icon" class="program-icon">
+            <div class="program-card" onclick="toggleContent('finance-content')">
+                <img src="Image/finance.png" alt="Finance Icon" class="program-icon">
                 <h3 class="program-title">Finance</h3>
                 <div class="program-arrow">
-                    <a href=""><i class='bx bx-chevron-down'></i></a>
+                    <i class='bx bx-chevron-down bx-lg'></i>
+                </div>
+            </div>
+            <div id="finance-content" class="program-content">
+                <div class="program-detail">
+                    <div class="program-description">
+                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Est gravida dictum phasellus fermentum dictum elit. Ut libero cursus ultrices malesuada dis metus sit. Egestas aenean apent ipsum adipiscing posuere accumsan placerat efficitur.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,9 +152,9 @@
                         Jl. Raya Bogor KM.38 No.56, Sukamaju, Kec. Cilodong, Depok, Jawa Barat 16415
                     </p>
                     <div class="footer-tlp">
-                        <a href="">
+                        <a href="#">
                             <i class="bx bxl-whatsapp"></i>
-                            <p>+62 811 99 3030 6</p>
+                            <p>+62 899 6911 888</p>
                         </a>
                     </div>
                 </div>
@@ -139,6 +167,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    function toggleContent(contentId) {
+        const content = document.getElementById(contentId);
+        const card = content.previousElementSibling;
+        
+        // Tutup semua konten yang terbuka
+        document.querySelectorAll('.program-content').forEach(item => {
+            if(item.id !== contentId) {
+                item.classList.remove('active');
+                item.previousElementSibling.classList.remove('active');
+            }
+        });
+        
+        // Toggle konten yang diklik
+        content.classList.toggle('active');
+        card.classList.toggle('active');
+    }
+    </script>
 </body>
 
 </html>
