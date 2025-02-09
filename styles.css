@@ -751,7 +751,7 @@ footer {
     }
 
     .nav-links {
-        display: none; /* Sembunyikan menu pada mobile */
+        display: none;
     }
 
     .home-content {
@@ -843,13 +843,182 @@ footer {
         right: 0;
         background-color: #091057;
         padding: 20px;
+        text-align: center;
     }
 
     .nav-links a {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        padding: 10px;
     }
 
     .nav-links.active {
         display: flex;
     }
+
+    /* Navbar */
+    .navbar {
+        padding: 10px 20px;
+    }
+    
+    .nav-logo {
+        width: 120px;
+    }
+
+    /* Home Section */
+    .home-content {
+        padding: 150px 20px 50px;
+    }
+
+    .home-content h1 {
+        font-size: 35px;
+        max-width: 100%;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    /* Profile Section */
+    .profile {
+        padding: 60px 20px;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+    }
+
+    .profile-text h2,
+    .profile-text2 h2 {
+        font-size: 28px;
+        text-align: center;
+        margin: 0 auto 20px;
+    }
+
+    .profile-text p,
+    .profile-text2 p {
+        font-size: 16px;
+    }
+
+    /* Program Section */
+    .program {
+        padding: 60px 20px;
+    }
+
+    .program-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .program-card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Program Studi Section */
+    .program-studi {
+        padding: 60px 20px;
+    }
+
+    .program-studi-wrapper {
+        flex-direction: column;
+    }
+
+    .program-studi-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Blog Section */
+    .blog {
+        padding: 60px 20px;
+    }
+
+    .blog-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .blog-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 50px 20px 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-img {
+        position: static;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        position: static;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .text-footer {
+        margin: 0 auto;
+        text-align: center;
+    }
 }
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .profile-content {
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    .program-grid {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .blog-grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tambahan untuk perangkat besar (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+

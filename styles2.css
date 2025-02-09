@@ -584,3 +584,307 @@ footer .container {
 .program-card.active .bx-chevron-down {
     transform: rotate(180deg);
 }
+
+/* Responsive Design untuk Mobile dan Desktop */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .nav-logo {
+        width: 120px;
+    }
+    
+    /* Home Content */
+    .home-content {
+        height: auto;
+        padding-bottom: 250px;
+    }
+    
+    .home-content-image {
+        height: 300px;
+    }
+    
+    .home-content-content {
+        position: relative;
+        top: 100px;
+        left: 20px;
+        right: 20px;
+        padding: 0;
+    }
+    
+    .home-content-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+    
+    .home-content-content p,
+    .home-content-text p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .home-content-image-right {
+        display: none; /* Sembunyikan gambar kanan di mobile */
+    }
+    
+    .home-content-text2 {
+        position: relative;
+        top: 120px;
+        left: 20px;
+        right: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .home-content-text2 h2 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    
+    /* Programs Section */
+    .programs {
+        padding: 50px 0;
+        margin-top: 50px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+    
+    .section-text {
+        font-size: 16px;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+    
+    .program-cards {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .program-card {
+        flex-direction: row;
+        height: auto;
+        padding: 15px 20px;
+        align-items: center;
+    }
+    
+    .program-icon {
+        width: 40px;
+        height: 48px;
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+    
+    .program-title {
+        font-size: 20px;
+        text-align: left;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 50px 20px 30px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0;
+    }
+    
+    .footer-img {
+        position: static;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .text-footer {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .social-links {
+        position: static;
+        justify-content: center;
+        padding: 20px 0;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .home-content-content {
+        max-width: 50%;
+    }
+    
+    .program-cards {
+        max-width: 950px;
+        margin: 50px auto;
+    }
+    
+    .program-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 50px;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 5%;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        padding: 15px 40px;
+    }
+    
+    .home-content-content {
+        max-width: 60%;
+    }
+    
+    .home-content-image-right {
+        right: 5%;
+    }
+    
+    .program-cards {
+        max-width: 90%;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .home-content-content {
+        max-width: 750px;
+    }
+}
+
+/* Navbar Updates */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background: #091057;
+    padding: 20px;
+    z-index: 999;
+}
+
+.mobile-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-nav a:last-child {
+    border-bottom: none;
+}
+
+/* Update Media Queries */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-nav.active {
+        display: block;
+        animation: slideDown 0.3s ease;
+    }
+
+    /* Home Content Updates */
+    .home-content {
+        margin-top: 75px;
+    }
+
+    .home-content-content {
+        padding: 0 20px;
+        top: 180px;
+    }
+
+    .home-content-text2 {
+        padding: 0 20px;
+        top: 600px;
+    }
+
+    /* Programs Section Updates */
+    .program-card {
+        margin: 0 20px 30px;
+    }
+
+    .program-title {
+        font-size: 24px;
+    }
+
+    .program-icon {
+        width: 50px;
+        height: 60px;
+    }
+
+    /* Footer Updates */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .footer-img {
+        position: static;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .social-links {
+        position: static;
+        justify-content: center;
+        padding: 20px 0;
+    }
+}
+
+/* Update untuk spacing yang lebih baik */
+@media (max-width: 576px) {
+    .home-content-image {
+        height: 300px;
+    }
+
+    .home-content-content {
+        top: 80px;
+    }
+
+    .home-content-text2 {
+        top: 100px;
+    }
+
+    .programs {
+        margin-top: 0;
+    }
+}
